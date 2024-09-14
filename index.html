@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grumpy Weather</title>
+    <!-- Link to main stylesheet for general styling -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to mobile-specific stylesheet, applied to devices with a max width of 768px in portrait orientation -->
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px) and (orientation: portrait)">
+    <!-- Load Google Maps JavaScript API with Places library and a specific API key; defer loading until the page is fully parsed -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLEAPIKEY&libraries=places&language=en" defer></script>
+    <!-- Load custom JavaScript file; defer loading until the page is fully parsed -->
+    <script src="script.js" defer></script>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/site.webmanifest">
+</head>
+<body>
+    <!-- Container for search functionality -->
+    <div class="search-container">
+        <!-- Form for location input and buttons -->
+        <form id="location-form">
+            <!-- Input field for city name with autocomplete disabled -->
+            <input type="text" id="city" placeholder="Enter a city..." autocomplete="off">
+            <!-- Container for buttons -->
+            <div class="button-container">
+                <!-- Submit button for form with search icon -->
+                <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+                <!-- Button to use current location with location arrow icon -->
+                <button type="button" id="geo-button"><i class="fas fa-location-arrow"></i></button>
+            </div>
+        </form>
+        <!-- Container to display weather result -->
+        <div id="weather-result"></div>
+    </div>
+    <!-- Cookie consent banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            This site does not use its own cookies or collect your personal data. However, we use third-party services, such as Google Maps, which may set cookies on your device to enhance user experience and collect data.
+            By continuing to use the site, you consent to the use of these third-party cookies.
+        </p>
+        <a href="#" id="accept-cookies">Got it</a>
+    </div>
+</body>
+</html>
+

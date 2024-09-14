@@ -1,0 +1,262 @@
+/* Styles for mobile devices in portrait orientation */
+@media (max-width: 768px) and (orientation: portrait) {
+    /* Header styles */
+    .header h1 {
+        font-size: 10vw; /* Larger font size for small screens */
+    }
+
+    .current-weather-info p {
+        font-size: 4vw; /* Font size for weather info paragraphs */
+    }
+
+    #grumpy-comment {
+        font-size: 6vw; /* Larger font size for the grumpy comment */
+    }
+
+    /* Styles for the index.html page */
+    .search-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        height: 100vh; /* Full viewport height */
+    }
+
+    /* Form container to align buttons vertically */
+    #location-form {
+        display: flex;
+        flex-direction: column; /* Stack form elements vertically */
+        align-items: center; /* Center input and buttons */
+        width: 90%; /* Form width relative to screen */
+    }
+
+    /* Search field styled as a thin line */
+    #city {
+        border: none;
+        border-bottom: 2px solid #E2DDD8;
+        padding: 10px;
+        width: 100%; /* Full width of the form */
+        background-color: transparent;
+        color: #E2DDD8;
+        font-family: 'HemingVariable', sans-serif;
+        font-size: 5vw; /* Font size adjusted for small screens */
+        outline: none;
+    }
+
+    /* Style for search field when focused */
+    #city:focus {
+        border-bottom: 2px solid #FCFBFA;
+        color: #FCFBFA;
+    }
+
+    /* Button container styles to align buttons horizontally */
+    .button-container {
+        display: flex;
+        flex-direction: row; /* Align buttons horizontally */
+        justify-content: center; /* Center buttons horizontally */
+        width: 100%; /* Full width of the container */
+        margin-top: 10px; /* Space between search field and buttons */
+    }
+
+    /* Styles for buttons with icons */
+    #search-button, #geo-button {
+        font-family: 'HemingVariable', sans-serif;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        color: #C7BDB7;
+        cursor: pointer;
+        margin: 0 5px; /* Horizontal spacing between buttons */
+        font-size: 8vw; /* Icon size adjusted for small screens */
+    }
+
+    /* Hover effect for buttons */
+    #search-button:hover, #geo-button:hover {
+        color: #FCFBFA;
+    }
+
+    /* Weather result styles */
+    #weather-result {
+        color: #FCFBFA;
+        margin-top: 20px;
+    }
+
+    /* Styles for the weather.html page */
+    .weather-container {
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        padding: 10px; /* Padding adjusted for small screens */
+        box-sizing: border-box;
+        color: #FCFBFA;
+        display: flex;
+        flex-direction: column;
+        overflow: auto; /* Allow vertical scrolling */
+    }
+
+    /* Styles for the "Back" button */
+    #back-button {
+        position: absolute;
+        top: 10px; /* Distance from the top */
+        right: 10px; /* Distance from the right */
+        font-family: 'HemingVariable', sans-serif;
+        padding: 5px;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        color: #C7BDB7;
+        cursor: pointer;
+        margin: 0 5px;
+        font-size: 5vw; /* Icon size adjusted for small screens */
+    }
+
+    /* Hover effect for the "Back" button */
+    #back-button:hover {
+        color: #FCFBFA;
+    }
+
+    /* Header styles for the weather page */
+    .header {
+        text-align: left;
+    }
+
+    .header h1 {
+        font-size: 10vw;
+    }
+
+    /* Forecast section styles */
+    .forecast {
+        display: flex;
+        flex-direction: column; /* Stack forecast columns vertically */
+        gap: 10px;
+        flex-grow: 1;
+        overflow-y: auto; /* Allow vertical scrolling */
+        height: auto; /* Height adjusted to content */
+    }
+
+    .forecast-column {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forecast-title {
+        font-size: 5.5vw;
+        margin-bottom: 5px;
+    }
+
+    .forecast-content {
+        overflow-y: auto;
+        font-size: 3vw;
+        flex-grow: 1;
+    }
+
+    .forecast-content p {
+        font-size: 4vw;
+        margin: 2px 0;
+    }
+
+    .forecast-column h2 {
+        font-size: 5.5vw;
+        margin-bottom: 10px;
+    }
+
+    .forecast-column div {
+        font-size: 4vw;
+        margin-bottom: 2px;
+    }
+
+    /* Footer styles */
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2vw;
+    }
+
+    /* Styles for Google autocomplete suggestions container */
+    .pac-container {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Styles for Google autocomplete suggestion items */
+    .pac-item {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    /* Hide Google autocomplete suggestion icons */
+    .pac-icon {
+        display: none !important;
+    }
+
+    /* Change text color for Google autocomplete suggestions */
+    .pac-item, .pac-item-query {
+        color: #C7BDB7 !important;
+        font-family: 'HemingVariable', sans-serif !important;
+        font-size: 3vw !important;
+    }
+
+    /* Lighten the "Powered by Google" logo */
+    .pac-logo:after {
+        background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png') !important;
+        filter: brightness(0) invert(1) !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: right !important;
+        height: 16px !important;
+        width: auto !important;
+        display: block !important;
+    }
+}
+
+/* Cookie Consent Banner Styles */
+.cookie-banner {
+    position: fixed; /* Fix the banner in a position */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Occupy full width of the page */
+    background-color: #FCFBFA; /* Light background */
+    color: #262322; /* Dark text color */
+    padding: 10px; /* Increased internal spacing for better readability */
+    text-align: center; /* Center the content */
+    z-index: 1000; /* Show the banner above other elements */
+    display: none; /* Hide the banner by default */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Paragraph styles in the banner */
+.cookie-banner p {
+    margin: 0; /* Remove default margin */
+    font-size: 3vw; /* Font size relative to viewport width */
+    color: #262322; /* Dark text color */
+    overflow-wrap: break-word; /* Break long words to fit within the container */
+    word-wrap: break-word; /* Additional support for older browsers */
+}
+
+/* Link styles in the banner */
+.cookie-banner a {
+    color: #262322; /* Dark link color */
+    text-decoration: underline; /* Underline links */
+    font-size: 3vw; /* Font size relative to viewport width */
+    overflow-wrap: break-word; /* Break long words to fit within the container */
+    word-wrap: break-word; /* Additional support for older browsers */
+}
+
+/* Hover effect for the button */
+.cookie-banner button:hover {
+    background-color: #C7BDB7; /* Change background color on hover */
+    color: #262322; /* Optional: change text color on hover for better contrast */
+}
+
+/* Focus effect for the button (optional for accessibility) */
+.cookie-banner button:focus {
+    outline: 2px solid #C7BDB7; /* Outline to indicate focus */
+    outline-offset: 2px; /* Space between outline and button */
+}

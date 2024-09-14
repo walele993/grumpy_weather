@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grumpy Weather</title>
+    <!-- Link to main stylesheet for general styling -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to mobile-specific stylesheet, applied to devices with a max width of 768px in portrait orientation -->
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px) and (orientation: portrait)">
+    <!-- Link to Font Awesome for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/site.webmanifest">
+</head>
+<body>
+    <!-- Container for the entire weather display -->
+    <div class="weather-container">
+        <!-- Button to go back to the search page with a left arrow icon -->
+        <button id="back-button" title="Back to Search"><i class="fas fa-arrow-left"></i></button>
+        <!-- Header section containing city name and current weather info -->
+        <header class="header">
+            <!-- Display the name of the city -->
+            <h1 id="city-name">City Name</h1>
+            <!-- Section for current weather information -->
+            <div class="current-weather-info">
+                <!-- Paragraph to display the current weather condition -->
+                <p id="weather-condition">Weather condition here</p>
+                <!-- Paragraph to display the current temperature -->
+                <p id="temperature">Temperature here</p>
+                <!-- Paragraph to display a grumpy comment about the weather -->
+                <p id="grumpy-comment">Grumpy comment here</p>
+            </div>
+        </header>
+        <!-- Section for displaying weather forecasts -->
+        <section class="forecast">
+            <!-- Column for hourly forecast -->
+            <div class="forecast-column">
+                <!-- Title for hourly forecast -->
+                <div id="hourly-forecast-title" class="forecast-title">Hourly Forecast</div>
+                <!-- Content area for hourly forecast details -->
+                <div id="hourly-forecast-content" class="forecast-content"></div>
+            </div>            
+            <!-- Column for daily forecast -->
+            <div class="forecast-column">
+                <!-- Title for daily forecast -->
+                <div id="daily-forecast-title" class="forecast-title">Daily Forecast</div>
+                <!-- Content area for daily forecast details -->
+                <div id="daily-forecast-content" class="forecast-content"></div>
+            </div>                
+        </section>
+        <!-- Footer section -->
+        <footer class="footer">
+            <!-- Text indicating the source of the weather data and credits -->
+            <p>
+                Powered by <a href="https://open-meteo.com/" target="_blank" style="color: #FCFBFA; text-decoration: none;">Open Meteo API</a><br>
+                Idea, code and grumpy jokes from Gabriele Meucci 
+                <a href="https://www.linkedin.com/in/gabriele-meucci/" target="_blank" title="LinkedIn" style="color: #FCFBFA;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/walele993" target="_blank" title="GitHub" style="color: #FCFBFA;">
+                    <i class="fab fa-github"></i>
+                </a>
+            </p>
+        </footer>        
+    </div>
+    <!-- Link to the custom JavaScript file, deferred until the page is fully parsed -->
+    <script src="script.js" defer></script>
+</body>
+</html>

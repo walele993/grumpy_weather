@@ -1,0 +1,310 @@
+﻿/* Define the custom font */
+@font-face {
+    font-family: 'HemingVariable'; /* Name of the font */
+    src: url('../HemingVariable.ttf') format('truetype'); /* Path to the font file and format */
+    font-weight: normal; /* Default font weight */
+    font-style: normal; /* Default font style */
+}
+
+/* General styles for the page */
+body {
+    background-color: #262322; /* Dark background color */
+    color: #FCFBFA; /* Light text color */
+    font-family: 'HemingVariable', sans-serif; /* Use the custom font with a fallback */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Hide global scrollbars */
+}
+
+/* Styles for the index.html page */
+.search-container {
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Form container to align buttons horizontally */
+#location-form {
+    display: flex;
+    align-items: center; /* Align search field and buttons vertically */
+}
+
+/* Button container styles to align buttons horizontally */
+.button-container {
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    justify-content: center; /* Center buttons horizontally */
+    width: auto; /* Adjust container width to screen limits */
+    margin: 0px; /* Space between search field and buttons */
+}
+
+/* Search field styled as a thin line */
+#city {
+    border: none;
+    border-bottom: 2px solid #E2DDD8; /* Thin bottom border */
+    padding: 10px;
+    width: 500px; /* Fixed width for larger screens */
+    background-color: transparent; /* Transparent background */
+    color: #E2DDD8; /* Light text color */
+    font-family: 'HemingVariable', sans-serif; /* Use the custom font */
+    font-size: 2vw; /* Font size relative to viewport width */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for search field when focused */
+#city:focus {
+    border-bottom: 2px solid #FCFBFA; /* Change border color on focus */
+    color: #FCFBFA; /* Change text color on focus */
+}
+
+/* Styles for buttons with icons */
+#search-button, #geo-button {
+    font-family: 'HemingVariable', sans-serif; /* Use the custom font */
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Circular buttons */
+    background-color: transparent; /* Transparent background */
+    color: #C7BDB7; /* Light button color */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 5px; /* Space between buttons */
+    font-size: 1.5vw; /* Font size relative to viewport width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw; /* Font size for icons */
+}
+
+/* Hover effect for buttons */
+#search-button:hover, #geo-button:hover {
+    color: #FCFBFA; /* Change button color on hover */
+}
+
+/* Weather result styles */
+#weather-result {
+    color: #FCFBFA; /* Light text color */
+    margin-top: 20px; /* Space above the weather result */
+}
+
+/* Styles for the weather.html page */
+.weather-container {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Padding inside the container */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    color: #FCFBFA; /* Light text color */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Styles for the "Back" button */
+#back-button {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    font-family: 'HemingVariable', sans-serif; /* Use the custom font */
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    background-color: transparent; /* Transparent background */
+    color: #C7BDB7; /* Light button color */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 5px; /* Space between buttons */
+    font-size: 1.5vw; /* Font size relative to viewport width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw; /* Font size for icon */
+}
+
+/* Hover effect for the "Back" button */
+#back-button:hover {
+    color: #FCFBFA; /* Change button color on hover */
+}
+
+/* Header styles */
+.header {
+    text-align: left; /* Align text to the left */
+}
+
+.header h1 {
+    font-size: 6vw; /* Font size relative to viewport width */
+    margin: 0.5px; /* Small margin */
+}
+
+.current-weather-info p {
+    font-size: 2vw; /* Font size relative to viewport width */
+    margin: 0px; /* Remove margin */
+}
+
+#grumpy-comment {
+    font-size: 4vw; /* Font size relative to viewport width */
+    margin-top: 0.3em; /* Space above the comment */
+    margin-bottom: 0px; /* Remove bottom margin */
+}
+
+/* Forecast section styles */
+.forecast {
+    display: flex;
+    justify-content: space-between; /* Space between forecast columns */
+    gap: 2vw; /* Gap between forecast columns */
+    flex-grow: 1;
+    overflow: hidden; /* Hide overflow */
+    height: 100%; /* Full height of the container */
+}
+
+.forecast-column {
+    flex: 1;
+    min-width: 0; /* Allow columns to shrink */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.forecast-title {
+    flex-shrink: 0; /* Prevent title from shrinking */
+    font-size: 3vw; /* Font size relative to viewport width */
+    margin-bottom: 5px; /* Space below the title */
+}
+
+.forecast-content {
+    overflow-y: auto; /* Allow vertical scrolling */
+    font-size: 2vw; /* Font size relative to viewport width */
+    flex-grow: 1;
+}
+
+.forecast-content p {
+    font-size: 2vw; /* Font size relative to viewport width */
+    margin: 2px 0; /* Space between paragraphs */
+}
+
+.forecast-column h2 {
+    font-size: 3vw; /* Font size relative to viewport width */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.forecast-column div {
+    font-size: 1.5vw; /* Font size relative to viewport width */
+    margin-bottom: 2px; /* Space below divs */
+}
+
+/* Hide scrollbar for WebKit-based browsers (Chrome, Safari, Edge) */
+.forecast-content::-webkit-scrollbar {
+    width: 0; /* Hide vertical scrollbar */
+    height: 0; /* Hide horizontal scrollbar */
+}
+
+.forecast-content::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Transparent scrollbar thumb */
+}
+
+.forecast-content::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent scrollbar track */
+}
+
+/* Hide scrollbar for Firefox */
+.forecast-content {
+    scrollbar-width: none; /* Hide scrollbar */
+    overflow: -moz-scrollbars-none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar in Edge and IE */
+.forecast-content {
+    -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Space above the footer */
+    font-size: 1vw; /* Font size relative to viewport width */
+}
+
+.footer a i {
+    text-decoration: none; /* Removes underline from the icons */
+}
+
+.footer a {
+    text-decoration: none; /* Removes underline from the links */
+}
+
+
+/* Styles for Google autocomplete suggestions container */
+.pac-container {
+    background-color: transparent !important; /* Transparent background */
+    border: none !important; /* Remove border */
+    box-shadow: none !important; /* Remove shadow */
+}
+
+/* Styles for Google autocomplete suggestion items */
+.pac-item {
+    padding: 0 !important; /* Remove padding */
+    margin: 0 !important; /* Remove margin */
+    border: none !important; /* Remove border */
+    background: transparent !important; /* Transparent background */
+}
+
+/* Hide Google autocomplete suggestion icons */
+.pac-icon {
+    display: none !important; /* Hide icons */
+}
+
+/* Change text color for Google autocomplete suggestions */
+.pac-item, .pac-item-query {
+    color: #C7BDB7 !important; /* Text color */
+    font-family: 'HemingVariable', sans-serif !important; /* Use the custom font */
+    font-size: 1vw !important; /* Font size relative to viewport width */
+}
+
+/* Lighten the "Powered by Google" logo */
+.pac-logo:after {
+    background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png') !important; /* Logo image */
+    filter: brightness(0) invert(1) !important; /* Invert colors */
+    background-size: contain !important; /* Contain the logo size */
+    background-repeat: no-repeat !important; /* Prevent repeating */
+    background-position: right !important; /* Position logo on the right */
+    height: 16px !important; /* Height of the logo */
+    width: auto !important; /* Auto width */
+    display: block !important; /* Block display */
+}
+
+/* Cookie Consent Banner Styles */
+.cookie-banner {
+    position: fixed; /* Fix the banner in a position */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Occupy full width of the page */
+    background-color: #FCFBFA; /* Light background */
+    color: #262322; /* Dark text color */
+    padding: 5px; /* Internal spacing */
+    text-align: center; /* Center the content */
+    z-index: 1000; /* Show the banner above other elements */
+    display: none; /* Hide the banner by default */
+}
+
+.cookie-banner p {
+    margin: 0; /* Remove default margin */
+    font-size: 1vw; /* Font size relative to viewport width */
+    color: #262322; /* Dark text color */
+}
+
+.cookie-banner a {
+    color: #262322; /* Dark link color */
+    text-decoration: underline; /* Underline links */
+}
+
+.cookie-banner button {
+    font-family: 'HemingVariable', sans-serif; /* Use custom font */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove borders */
+    background-color: #262322; /* Dark button background color */
+    color: #FCFBFA; /* Light button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1vw; /* Font size relative to viewport width */
+}
+
+/* Hover effect for the button */
+.cookie-banner button:hover {
+    background-color: #C7BDB7; /* Change background color on hover */
+}
