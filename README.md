@@ -103,3 +103,7 @@ The Open Meteo API is used to fetch weather data, including current conditions, 
 
 The Grumpy Weather Application is a simple yet functional web tool that combines weather information with a touch of humor. It demonstrates the use of modern web technologies and APIs to create an interactive and engaging user experience. This project highlights skills in front-end development, including HTML, CSS, and JavaScript, as well as working with third-party APIs.
 Feel free to explore and modify the code to fit your needs or to add additional features. Happy coding!
+
+## Credits
+
+This project was created by Gabriele Meucci.
