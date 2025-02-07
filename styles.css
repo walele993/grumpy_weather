@@ -1,4 +1,4 @@
-﻿/* Define the custom font */
+/* Define the custom font */
 @font-face {
     font-family: 'HemingVariable'; /* Name of the font */
     src: url('../HemingVariable.ttf') format('truetype'); /* Path to the font file and format */
@@ -140,7 +140,7 @@ body {
 }
 
 #grumpy-comment {
-    font-size: 4vw; /* Font size relative to viewport width */
+    font-size: 3vw; /* Font size relative to viewport width */
     margin-top: 0.3em; /* Space above the comment */
     margin-bottom: 0px; /* Remove bottom margin */
 }
@@ -164,28 +164,28 @@ body {
 
 .forecast-title {
     flex-shrink: 0; /* Prevent title from shrinking */
-    font-size: 3vw; /* Font size relative to viewport width */
-    margin-bottom: 5px; /* Space below the title */
+    font-size: 2vw; /* Font size relative to viewport width */
+    margin-bottom: 3px; /* Space below the title */
 }
 
 .forecast-content {
     overflow-y: auto; /* Allow vertical scrolling */
-    font-size: 2vw; /* Font size relative to viewport width */
+    font-size: 1.5vw; /* Font size relative to viewport width */
     flex-grow: 1;
 }
 
 .forecast-content p {
-    font-size: 2vw; /* Font size relative to viewport width */
+    font-size: 1.5vw; /* Font size relative to viewport width */
     margin: 2px 0; /* Space between paragraphs */
 }
 
 .forecast-column h2 {
-    font-size: 3vw; /* Font size relative to viewport width */
+    font-size: 2vw; /* Font size relative to viewport width */
     margin-bottom: 10px; /* Space below the title */
 }
 
 .forecast-column div {
-    font-size: 1.5vw; /* Font size relative to viewport width */
+    font-size: 2vw; /* Font size relative to viewport width */
     margin-bottom: 2px; /* Space below divs */
 }
 
