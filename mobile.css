@@ -17,24 +17,24 @@ body {
 
 /* Main content area */
 .main-content {
-    flex: 1; /* Allow the main content to grow and fill available space */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 10px; /* Internal padding */
-    margin-bottom: 60px; /* Space for the footer and cookie banner */
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 90px; /* Spazio per il footer */
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
-    position: fixed; /* Mantieni il footer fisso */
-    bottom: 0; /* Allinea in basso */
-    left: 0; /* Allinea a sinistra */
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     padding: 10px;
     background-color: #262322;
     color: #FCFBFA;
     text-align: center;
-    z-index: 999; /* Assicura che sia sopra altri elementi */
-    font-size: 3vw; /* Dimensione del font aumentata */
+    z-index: 999;
+    font-size: 3vw;
 }
 
 /* Mobile device styles in portrait orientation */
@@ -49,7 +49,8 @@ body {
     }
 
     #grumpy-comment {
-        font-size: 6vw; /* Dimensione del font */
+        font-size: 8vw; /* Dimensione del font */
+        margin-top: 20px
         margin-bottom: 20px; /* Spazio aggiuntivo sotto */
     }
 
@@ -126,14 +127,14 @@ body {
 
     /* Styles for the weather.html page */
     .weather-container {
-        width: 100%; /* Full width */
-        min-height: 100vh; /* Full viewport height */
-        padding: 10px; /* Internal padding */
-        box-sizing: border-box; /* Include padding and border in dimensions */
-        color: #FCFBFA; /* Text color */
-        display: flex; /* Use flexbox layout */
-        flex-direction: column; /* Stack items vertically */
-        overflow: auto; /* Allow vertical scrolling */
+        width: 100%;
+        min-height: 100vh; /* Usa min-height invece di height */
+        padding: 10px;
+        box-sizing: border-box;
+        color: #FCFBFA;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /* Disabilita overflow sul contenitore principale */
     }
 
     /* Styles for the "Back" button */
@@ -169,11 +170,12 @@ body {
 
     /* Forecast section styles */
     .forecast {
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Stack forecast columns vertically */
-        flex-grow: 1; /* Allow to grow */
-        overflow-y: auto; /* Allow vertical scrolling */
-        max-height: calc(100vh - 150px); /* Height adjusted to avoid overlap with footer */
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Fai espandere la sezione */
+        overflow-y: auto; /* Abilita lo scroll verticale */
+        max-height: calc(100vh - 250px); /* Regola l'altezza massima */
+        padding-bottom: 90px; /* Aggiungi spazio sotto */
     }
 
     .forecast-column {
