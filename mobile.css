@@ -1,4 +1,43 @@
-/* Styles for mobile devices in portrait orientation */
+/* General styles */
+* {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Body styles */
+body {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange items in a column */
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    font-family: 'HemingVariable', sans-serif; /* Default font */
+    background-color: #262322; /* Background color */
+    color: #FCFBFA; /* Default text color */
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Allow the main content to grow and fill available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Internal padding */
+    margin-bottom: 60px; /* Space for the footer and cookie banner */
+}
+
+/* Footer styles */
+.footer {
+    position: fixed; /* Mantieni il footer fisso */
+    bottom: 0; /* Allinea in basso */
+    left: 0; /* Allinea a sinistra */
+    width: 100%;
+    padding: 10px;
+    background-color: #262322;
+    color: #FCFBFA;
+    text-align: center;
+    z-index: 999; /* Assicura che sia sopra altri elementi */
+    font-size: 3vw; /* Dimensione del font aumentata */
+}
+
+/* Mobile device styles in portrait orientation */
 @media (max-width: 768px) and (orientation: portrait) {
     /* Header styles */
     .header h1 {
@@ -10,22 +49,24 @@
     }
 
     #grumpy-comment {
-        font-size: 6vw; /* Larger font size for the grumpy comment */
+        font-size: 6vw; /* Dimensione del font */
+        margin-bottom: 20px; /* Spazio aggiuntivo sotto */
     }
 
     /* Styles for the index.html page */
     .search-container {
-        text-align: center;
-        display: flex;
+        text-align: center; /* Center the content */
+        display: flex; /* Use flexbox layout */
         flex-direction: column; /* Stack items vertically */
         justify-content: center; /* Center items vertically */
         align-items: center; /* Center items horizontally */
-        height: 100vh; /* Full viewport height */
+        min-height: 100vh; /* Full viewport height */
+        padding: 20px; /* Add padding for better spacing */
     }
 
     /* Form container to align buttons vertically */
     #location-form {
-        display: flex;
+        display: flex; /* Use flexbox for layout */
         flex-direction: column; /* Stack form elements vertically */
         align-items: center; /* Center input and buttons */
         width: 90%; /* Form width relative to screen */
@@ -33,26 +74,26 @@
 
     /* Search field styled as a thin line */
     #city {
-        border: none;
-        border-bottom: 2px solid #E2DDD8;
-        padding: 10px;
+        border: none; /* Remove border */
+        border-bottom: 2px solid #E2DDD8; /* Underline effect */
+        padding: 10px; /* Internal padding */
         width: 100%; /* Full width of the form */
-        background-color: transparent;
-        color: #E2DDD8;
-        font-family: 'HemingVariable', sans-serif;
+        background-color: transparent; /* Transparent background */
+        color: #E2DDD8; /* Text color */
+        font-family: 'HemingVariable', sans-serif; /* Font family */
         font-size: 5vw; /* Font size adjusted for small screens */
-        outline: none;
+        outline: none; /* Remove outline on focus */
     }
 
     /* Style for search field when focused */
     #city:focus {
-        border-bottom: 2px solid #FCFBFA;
-        color: #FCFBFA;
+        border-bottom: 2px solid #FCFBFA; /* Change underline color on focus */
+        color: #FCFBFA; /* Change text color on focus */
     }
 
     /* Button container styles to align buttons horizontally */
     .button-container {
-        display: flex;
+        display: flex; /* Use flexbox for layout */
         flex-direction: row; /* Align buttons horizontally */
         justify-content: center; /* Center buttons horizontally */
         width: 100%; /* Full width of the container */
@@ -61,157 +102,150 @@
 
     /* Styles for buttons with icons */
     #search-button, #geo-button {
-        font-family: 'HemingVariable', sans-serif;
-        padding: 10px;
-        border: none;
-        border-radius: 50%;
-        background-color: transparent;
-        color: #C7BDB7;
-        cursor: pointer;
+        font-family: 'HemingVariable', sans-serif; /* Font family */
+        padding: 10px; /* Internal padding */
+        border: none; /* Remove border */
+        border-radius: 50%; /* Rounded buttons */
+        background-color: transparent; /* Transparent background */
+        color: #C7BDB7; /* Button color */
+        cursor: pointer; /* Pointer cursor on hover */
         margin: 0 5px; /* Horizontal spacing between buttons */
         font-size: 8vw; /* Icon size adjusted for small screens */
     }
 
     /* Hover effect for buttons */
     #search-button:hover, #geo-button:hover {
-        color: #FCFBFA;
+        color: #FCFBFA; /* Change color on hover */
     }
 
     /* Weather result styles */
     #weather-result {
-        color: #FCFBFA;
-        margin-top: 20px;
+        color: #FCFBFA; /* Text color */
+        margin-top: 20px; /* Space above results */
     }
 
     /* Styles for the weather.html page */
     .weather-container {
-        width: 100%;
-        height: 100vh; /* Full viewport height */
-        padding: 10px; /* Padding adjusted for small screens */
-        box-sizing: border-box;
-        color: #FCFBFA;
-        display: flex;
-        flex-direction: column;
+        width: 100%; /* Full width */
+        min-height: 100vh; /* Full viewport height */
+        padding: 10px; /* Internal padding */
+        box-sizing: border-box; /* Include padding and border in dimensions */
+        color: #FCFBFA; /* Text color */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack items vertically */
         overflow: auto; /* Allow vertical scrolling */
     }
 
     /* Styles for the "Back" button */
     #back-button {
-        position: absolute;
+        position: absolute; /* Absolute positioning */
         top: 10px; /* Distance from the top */
         right: 10px; /* Distance from the right */
-        font-family: 'HemingVariable', sans-serif;
-        padding: 5px;
-        border: none;
-        border-radius: 50%;
-        background-color: transparent;
-        color: #C7BDB7;
-        cursor: pointer;
-        margin: 0 5px;
+        font-family: 'HemingVariable', sans-serif; /* Font family */
+        padding: 5px; /* Internal padding */
+        border: none; /* Remove border */
+        border-radius: 50%; /* Rounded button */
+        background-color: transparent; /* Transparent background */
+        color: #C7BDB7; /* Button color */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin: 0 5px; /* Horizontal spacing */
         font-size: 5vw; /* Icon size adjusted for small screens */
     }
 
     /* Hover effect for the "Back" button */
     #back-button:hover {
-        color: #FCFBFA;
+        color: #FCFBFA; /* Change color on hover */
     }
 
     /* Header styles for the weather page */
     .header {
-        text-align: left;
+        text-align: left; /* Align text to the left */
+        margin-bottom: 5px; /* Space below title */
     }
 
     .header h1 {
-        font-size: 10vw;
+        font-size: 10vw; /* Larger font size */
     }
 
     /* Forecast section styles */
     .forecast {
-        display: flex;
+        display: flex; /* Use flexbox for layout */
         flex-direction: column; /* Stack forecast columns vertically */
-        gap: 10px;
-        flex-grow: 1;
+        flex-grow: 1; /* Allow to grow */
         overflow-y: auto; /* Allow vertical scrolling */
-        height: auto; /* Height adjusted to content */
+        max-height: calc(100vh - 150px); /* Height adjusted to avoid overlap with footer */
     }
 
     .forecast-column {
-        flex: 1;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
+        flex: 1; /* Allow columns to grow */
+        min-width: 0; /* Prevent overflow */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
     }
 
     .forecast-title {
-        font-size: 5.5vw;
-        margin-bottom: 5px;
+        font-size: 5.5vw; /* Title font size */
+        margin-bottom: 5px; /* Space below title */
     }
 
     .forecast-content {
-        overflow-y: auto;
-        font-size: 3vw;
-        flex-grow: 1;
+        overflow-y: auto; /* Allow vertical scrolling */
+        font-size: 3vw; /* Font size for content */
+        flex-grow: 1; /* Allow to grow */
     }
 
     .forecast-content p {
-        font-size: 4vw;
-        margin: 2px 0;
+        font-size: 4vw; /* Font size for paragraphs */
+        margin: 2px 0; /* Space above and below paragraphs */
     }
 
     .forecast-column h2 {
-        font-size: 5.5vw;
-        margin-bottom: 10px;
+        font-size: 5.5vw; /* Font size for column headers */
+        margin-bottom: 10px; /* Space below headers */
     }
 
     .forecast-column div {
-        font-size: 4vw;
-        margin-bottom: 2px;
-    }
-
-    /* Footer styles */
-    .footer {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 2vw;
+        font-size: 4vw; /* Font size for content in columns */
+        margin-bottom: 2px; /* Space below each item */
     }
 
     /* Styles for Google autocomplete suggestions container */
     .pac-container {
-        background-color: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
+        background-color: #262322 !important; /* Background color for suggestions */
+        border: none !important; /* Remove border */
+        box-shadow: none !important; /* Remove shadow */
     }
 
     /* Styles for Google autocomplete suggestion items */
     .pac-item {
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        background: transparent !important;
+        padding: 0 !important; /* Remove padding */
+        margin: 0 !important; /* Remove margin */
+        border: none !important; /* Remove border */
+        background: transparent !important; /* Transparent background */
     }
 
     /* Hide Google autocomplete suggestion icons */
     .pac-icon {
-        display: none !important;
+        display: none !important; /* Hide icons */
     }
 
     /* Change text color for Google autocomplete suggestions */
     .pac-item, .pac-item-query {
-        color: #C7BDB7 !important;
-        font-family: 'HemingVariable', sans-serif !important;
-        font-size: 3vw !important;
+        color: #C7BDB7 !important; /* Text color */
+        font-family: 'HemingVariable', sans-serif !important; /* Font family */
+        font-size: 3vw !important; /* Font size */
     }
 
     /* Lighten the "Powered by Google" logo */
     .pac-logo:after {
-        background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png') !important;
-        filter: brightness(0) invert(1) !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: right !important;
-        height: 16px !important;
-        width: auto !important;
-        display: block !important;
+        background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png') !important; /* Change logo */
+        filter: brightness(0) invert(1) !important; /* Invert color */
+        background-size: contain !important; /* Resize logo */
+        background-repeat: no-repeat !important; /* No repeat */
+        background-position: right !important; /* Align to the right */
+        height: 16px !important; /* Set height */
+        width: auto !important; /* Automatic width */
+        display: block !important; /* Display as block */
     }
 }
 
