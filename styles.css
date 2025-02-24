@@ -1,310 +1,286 @@
 /* Define the custom font */
 @font-face {
-    font-family: 'HemingVariable'; /* Name of the font */
-    src: url('../HemingVariable.ttf') format('truetype'); /* Path to the font file and format */
-    font-weight: normal; /* Default font weight */
-    font-style: normal; /* Default font style */
+    font-family: 'HemingVariable';
+    src: url('../HemingVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* General styles for the page */
 body {
-    background-color: #262322; /* Dark background color */
-    color: #FCFBFA; /* Light text color */
-    font-family: 'HemingVariable', sans-serif; /* Use the custom font with a fallback */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: #262322; /* Dark background */
+    color: #FCFBFA; /* Light text */
+    font-family: 'HemingVariable', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow: hidden; /* Hide global scrollbars */
 }
 
-/* Styles for the index.html page */
+/* Search Page */
 .search-container {
-    text-align: center; /* Center-align text */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    height: 100vh; /* Full viewport height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Form container to align buttons horizontally */
 #location-form {
     display: flex;
-    align-items: center; /* Align search field and buttons vertically */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
 }
 
-/* Button container styles to align buttons horizontally */
-.button-container {
-    display: flex;
-    flex-direction: row; /* Align buttons horizontally */
-    justify-content: center; /* Center buttons horizontally */
-    width: auto; /* Adjust container width to screen limits */
-    margin: 0px; /* Space between search field and buttons */
-}
-
-/* Search field styled as a thin line */
 #city {
     border: none;
     border-bottom: 2px solid #E2DDD8; /* Thin bottom border */
     padding: 10px;
-    width: 500px; /* Fixed width for larger screens */
-    background-color: transparent; /* Transparent background */
-    color: #E2DDD8; /* Light text color */
-    font-family: 'HemingVariable', sans-serif; /* Use the custom font */
-    font-size: 2vw; /* Font size relative to viewport width */
-    outline: none; /* Remove default outline */
+    width: 100%;
+    max-width: 500px;
+    background-color: transparent;
+    color: #E2DDD8;
+    font-family: 'HemingVariable', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+    outline: none;
+    transition: border-color 0.3s, color 0.3s;
 }
 
-/* Style for search field when focused */
 #city:focus {
-    border-bottom: 2px solid #FCFBFA; /* Change border color on focus */
-    color: #FCFBFA; /* Change text color on focus */
+    border-bottom-color: #FCFBFA; /* Light border on focus */
+    color: #FCFBFA; /* Light text on focus */
 }
 
-/* Styles for buttons with icons */
-#search-button, #geo-button {
-    font-family: 'HemingVariable', sans-serif; /* Use the custom font */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+#search-button, #geo-button, #back-button {
+    font-family: 'HemingVariable', sans-serif;
     padding: 10px;
     border: none;
-    border-radius: 50%; /* Circular buttons */
-    background-color: transparent; /* Transparent background */
-    color: #C7BDB7; /* Light button color */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin: 0 5px; /* Space between buttons */
-    font-size: 1.5vw; /* Font size relative to viewport width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vw; /* Font size for icons */
+    border-radius: 50%;
+    background-color: transparent;
+    color: #C7BDB7;
+    cursor: pointer;
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+    transition: color 0.3s;
 }
 
-/* Hover effect for buttons */
-#search-button:hover, #geo-button:hover {
-    color: #FCFBFA; /* Change button color on hover */
+#search-button:hover, #geo-button:hover, #back-button:hover {
+    color: #FCFBFA; /* Light text on hover */
 }
 
-/* Weather result styles */
-#weather-result {
-    color: #FCFBFA; /* Light text color */
-    margin-top: 20px; /* Space above the weather result */
-}
-
-/* Styles for the weather.html page */
+/* Weather Page */
 .weather-container {
-    width: 100%; /* Full width */
-    height: 100vh; /* Full viewport height */
-    padding: 20px; /* Padding inside the container */
-    box-sizing: border-box; /* Include padding in width/height calculations */
-    color: #FCFBFA; /* Light text color */
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #FCFBFA;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    position: relative;
 }
 
-/* Styles for the "Back" button */
 #back-button {
     position: absolute;
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    font-family: 'HemingVariable', sans-serif; /* Use the custom font */
-    padding: 10px;
-    border: none;
-    border-radius: 50%; /* Circular button */
-    background-color: transparent; /* Transparent background */
-    color: #C7BDB7; /* Light button color */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin: 0 5px; /* Space between buttons */
-    font-size: 1.5vw; /* Font size relative to viewport width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vw; /* Font size for icon */
-}
-
-/* Hover effect for the "Back" button */
-#back-button:hover {
-    color: #FCFBFA; /* Change button color on hover */
-}
-
-/* Header styles */
-.header {
-    text-align: left; /* Align text to the left */
+    background-color: #262322;
+    top: 20px;
+    right: 20px;
 }
 
 .header h1 {
-    font-size: 6vw; /* Font size relative to viewport width */
-    margin: 0.5px; /* Small margin */
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsive font size */
+    margin: 0.5px;
+    color: #FCFBFA;
 }
 
 .current-weather-info p {
-    font-size: 2vw; /* Font size relative to viewport width */
-    margin: 0px; /* Remove margin */
+    font-size: clamp(1.2rem, 3vw, 2rem); /* Responsive font size */
+    margin: 0;
 }
 
 #grumpy-comment {
-    font-size: 3vw; /* Font size relative to viewport width */
-    margin-top: 0.3em; /* Space above the comment */
-    margin-bottom: 0px; /* Remove bottom margin */
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
+    margin-top: 0.3em;
+    margin-bottom: 0;
+    color: #C7BDB7;
 }
 
-/* Forecast section styles */
+/* Forecast Section */
 .forecast {
     display: flex;
-    justify-content: space-between; /* Space between forecast columns */
-    gap: 2vw; /* Gap between forecast columns */
+    flex-direction: column;
+    gap: 20px;
     flex-grow: 1;
-    overflow: hidden; /* Hide overflow */
-    height: 100%; /* Full height of the container */
+    margin-bottom: 60px;
+    overflow: auto;
+    padding: 2;
+    margin-top: 2px;
+}
+
+@media (min-width: 768px) {
+    .forecast {
+        flex-direction: row; /* Horizontal layout on larger screens */
+        margin-bottom: 10px;
+    }
 }
 
 .forecast-column {
     flex: 1;
-    min-width: 0; /* Allow columns to shrink */
+    min-width: 0;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
 }
 
 .forecast-title {
-    flex-shrink: 0; /* Prevent title from shrinking */
-    font-size: 2vw; /* Font size relative to viewport width */
-    margin-bottom: 3px; /* Space below the title */
+    flex-shrink: 0;
+    font-size: clamp(1.3rem, 2.8vw, 1.8rem); /* Responsive font size, slightly smaller */
+    margin-bottom: -10px; /* Further reduced space below titles */
+    color: #FCFBFA;
 }
 
 .forecast-content {
-    overflow-y: auto; /* Allow vertical scrolling */
-    font-size: 1.5vw; /* Font size relative to viewport width */
+    overflow-y: auto;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
     flex-grow: 1;
+    padding-right: 10px;
 }
 
 .forecast-content p {
-    font-size: 1.5vw; /* Font size relative to viewport width */
-    margin: 2px 0; /* Space between paragraphs */
+    margin: 0px 0;
 }
 
-.forecast-column h2 {
-    font-size: 2vw; /* Font size relative to viewport width */
-    margin-bottom: 10px; /* Space below the title */
-}
-
-.forecast-column div {
-    font-size: 2vw; /* Font size relative to viewport width */
-    margin-bottom: 2px; /* Space below divs */
-}
-
-/* Hide scrollbar for WebKit-based browsers (Chrome, Safari, Edge) */
+/* Hide scrollbars */
 .forecast-content::-webkit-scrollbar {
-    width: 0; /* Hide vertical scrollbar */
-    height: 0; /* Hide horizontal scrollbar */
+    width: 0;
+    height: 0;
 }
 
-.forecast-content::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Transparent scrollbar thumb */
-}
-
-.forecast-content::-webkit-scrollbar-track {
-    background-color: transparent; /* Transparent scrollbar track */
-}
-
-/* Hide scrollbar for Firefox */
 .forecast-content {
-    scrollbar-width: none; /* Hide scrollbar */
-    overflow: -moz-scrollbars-none; /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-/* Hide scrollbar in Edge and IE */
-.forecast-content {
-    -ms-overflow-style: none; /* Hide scrollbar */
-}
-
-/* Footer styles */
+/* Footer */
 .footer {
-    text-align: center; /* Center-align text */
-    margin-top: 20px; /* Space above the footer */
-    font-size: 1vw; /* Font size relative to viewport width */
+    text-align: center;
+    padding: 3px;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Responsive font size */
+    color: #C7BDB7;
+    position: sticky;
+    bottom: 0;
 }
 
-.footer a i {
-    text-decoration: none; /* Removes underline from the icons */
+@media (min-width: 768px) {
+    .footer {
+        margin-top: 5px; /* Riduci ulteriormente il margine su schermi molto grandi */
+    }
+}
+
+.footer {
+    margin-top: auto; /* Margine fisso per schermi piccoli */
 }
 
 .footer a {
-    text-decoration: none; /* Removes underline from the links */
+    color: #C7BDB7;
+    text-decoration: none;
 }
-
 
 /* Styles for Google autocomplete suggestions container */
 .pac-container {
-    background-color: transparent !important; /* Transparent background */
-    border: none !important; /* Remove border */
-    box-shadow: none !important; /* Remove shadow */
+    background-color: #262322 !important; /* Sfondo scuro semi-trasparente */
+    border: none !important; /* Rimuovi il bordo */
+    border-radius: 8px !important; /* Bordi arrotondati */
+    margin-top: 5px; /* Spazio sopra il contenitore */
+    width: 100% !important; /* Adatta la larghezza al campo di input */
+    max-width: 500px; /* Larghezza massima per evitare che si allarghi troppo */
 }
 
 /* Styles for Google autocomplete suggestion items */
 .pac-item {
-    padding: 0 !important; /* Remove padding */
-    margin: 0 !important; /* Remove margin */
-    border: none !important; /* Remove border */
-    background: transparent !important; /* Transparent background */
+    padding: 0 !important; /* Spaziatura interna */
+    margin: 0 !important; /* Rimuovi il margine */
+    border: none !important; /* Rimuovi la linea divisoria */
+    background: transparent !important; /* Sfondo trasparente */
+    transition: background-color 0.3s ease; /* Transizione fluida */
+}
+
+/* Rimuovi la linea divisoria dall'ultimo elemento */
+.pac-item:last-child {
+    border-bottom: none !important;
+}
+
+.pac-item:hover {
+    background-color: rgba(252, 251, 250, 0.05) !important; /* Sfondo leggermente più chiaro al passaggio del mouse */
 }
 
 /* Hide Google autocomplete suggestion icons */
 .pac-icon {
-    display: none !important; /* Hide icons */
+    display: none !important; /* Nascondi le icone */
 }
 
 /* Change text color for Google autocomplete suggestions */
 .pac-item, .pac-item-query {
-    color: #C7BDB7 !important; /* Text color */
-    font-family: 'HemingVariable', sans-serif !important; /* Use the custom font */
-    font-size: 1vw !important; /* Font size relative to viewport width */
+    color: #C7BDB7 !important; /* Colore del testo */
+    font-family: 'HemingVariable', sans-serif !important; /* Usa il font personalizzato */
+    font-size: clamp(0.9rem, 2vw, 1.2rem) !important; /* Dimensione del testo responsive */
 }
 
 /* Lighten the "Powered by Google" logo */
 .pac-logo:after {
-    background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png') !important; /* Logo image */
-    filter: brightness(0) invert(1) !important; /* Invert colors */
-    background-size: contain !important; /* Contain the logo size */
-    background-repeat: no-repeat !important; /* Prevent repeating */
-    background-position: right !important; /* Position logo on the right */
-    height: 16px !important; /* Height of the logo */
-    width: auto !important; /* Auto width */
-    display: block !important; /* Block display */
+    background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png') !important; /* Logo di Google */
+    filter: brightness(0) invert(1) !important; /* Inverti i colori per adattarli al tema scuro */
+    background-size: contain !important; /* Contieni la dimensione del logo */
+    background-repeat: no-repeat !important; /* Evita la ripetizione */
+    background-position: right !important; /* Allinea il logo a destra */
+    height: 16px !important; /* Altezza del logo */
+    width: auto !important; /* Larghezza automatica */
+    display: block !important; /* Mostra come blocco */
+    margin-top: 5px; /* Spazio sopra il logo */
 }
 
-/* Cookie Consent Banner Styles */
+/* Cookie Banner */
 .cookie-banner {
-    position: fixed; /* Fix the banner in a position */
-    bottom: 0; /* Position at the bottom */
-    left: 0; /* Align to the left */
-    width: 100%; /* Occupy full width of the page */
-    background-color: #FCFBFA; /* Light background */
-    color: #262322; /* Dark text color */
-    padding: 5px; /* Internal spacing */
-    text-align: center; /* Center the content */
-    z-index: 1000; /* Show the banner above other elements */
-    display: none; /* Hide the banner by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #C7BDB7;
+    color: #262322;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Hidden by default */
 }
 
 .cookie-banner p {
-    margin: 0; /* Remove default margin */
-    font-size: 1vw; /* Font size relative to viewport width */
-    color: #262322; /* Dark text color */
-}
-
-.cookie-banner a {
-    color: #262322; /* Dark link color */
-    text-decoration: underline; /* Underline links */
+    margin: 0;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Responsive font size */
 }
 
 .cookie-banner button {
-    font-family: 'HemingVariable', sans-serif; /* Use custom font */
-    padding: 10px 20px; /* Button padding */
-    border: none; /* Remove borders */
-    background-color: #262322; /* Dark button background color */
-    color: #FCFBFA; /* Light button text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1vw; /* Font size relative to viewport width */
+    font-family: 'HemingVariable', sans-serif;
+    padding: 5px 10px;
+    border: none;
+    background-color: #262322;
+    color: #C7BDB7;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Responsive font size */
+    transition: background-color 0.3s;
 }
 
-/* Hover effect for the button */
 .cookie-banner button:hover {
-    background-color: #C7BDB7; /* Change background color on hover */
+    background-color: #FCFBFA;
 }
