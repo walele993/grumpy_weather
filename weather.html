@@ -26,3 +26,48 @@
             <!-- Display the name of the city -->
             <h1 id="city-name">City Name</h1>
             <!-- Section for current weather information -->
+            <div class="current-weather-info">
+                <!-- Paragraph to display the current weather condition -->
+                <p id="weather-condition">Weather condition here</p>
+                <!-- Paragraph to display the current temperature -->
+                <p id="temperature">Temperature here</p>
+                <!-- Paragraph to display a grumpy comment about the weather -->
+                <p id="grumpy-comment">Grumpy comment here</p>
+            </div>
+        </header>
+        <!-- Section for displaying weather forecasts -->
+        <section class="forecast">
+            <!-- Column for hourly forecast -->
+            <div class="forecast-column">
+                <!-- Title for hourly forecast -->
+                <div id="hourly-forecast-title" class="forecast-title">Hourly Forecast</div>
+                <!-- Content area for hourly forecast details -->
+                <div id="hourly-forecast-content" class="forecast-content"></div>
+            </div>            
+            <!-- Column for daily forecast -->
+            <div class="forecast-column">
+                <!-- Title for daily forecast -->
+                <div id="daily-forecast-title" class="forecast-title">Daily Forecast</div>
+                <!-- Content area for daily forecast details -->
+                <div id="daily-forecast-content" class="forecast-content"></div>
+            </div>                
+        </section>
+        <!-- Footer section -->
+        <footer class="footer">
+            <!-- Text indicating the source of the weather data and credits -->
+            <p>
+                Powered by <a href="https://open-meteo.com/" target="_blank" style="color: #FCFBFA; text-decoration: none;">Open Meteo API</a><br>
+                Idea, code and grumpy jokes from Gabriele Meucci 
+                <a href="https://www.linkedin.com/in/gabriele-meucci/" target="_blank" title="LinkedIn" style="color: #FCFBFA;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/walele993" target="_blank" title="GitHub" style="color: #FCFBFA;">
+                    <i class="fab fa-github"></i>
+                </a>
+            </p>
+        </footer>        
+    </div>
+    <!-- Link to the custom JavaScript file, deferred until the page is fully parsed -->
+    <script src="script.js" defer></script>
+</body>
+</html>
