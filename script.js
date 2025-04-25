@@ -426,7 +426,7 @@ function displayWeatherDetails(weatherCode, temperature, hourlyForecast, dailyFo
         document.getElementById('city-name').textContent = params.city; // Set city name
         document.getElementById('grumpy-comment').textContent = grumpyMessage;
         document.getElementById('weather-condition').textContent = weatherCondition;
-        document.getElementById('temperature').textContent = `Temperature: ${temperature}°C`;
+        document.getElementById('temperature').textContent = `Temperature: ${temperature}C`;
 
         // Handle hourly forecast
         let hourlyReport = '';
